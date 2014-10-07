@@ -1,0 +1,24 @@
+﻿La génération a démarré 01/10/2014 09:51:32.
+     1>Projet "C:\Users\Zizou\Documents\c++\bigbang\bigbang\bigbang.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Carre.cpp Fourmi.cpp MyControlEngine.cpp MyGameEngine.cpp MyGraphicEngine.cpp Papillon.cpp main.cpp
+         main.cpp
+     1>c:\users\zizou\documents\c++\bigbang\bigbang\main.cpp(4): fatal error C1083: Impossible d'ouvrir le fichier include : 'Engine.h' : No such file or directory
+         Papillon.cpp
+     1>c:\users\zizou\documents\c++\bigbang\bigbang\papillon.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'GraphicPrimitives.h' : No such file or directory
+         MyGraphicEngine.cpp
+     1>c:\users\zizou\documents\c++\bigbang\bigbang\mygraphicengine.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'Engine.h' : No such file or directory
+         MyGameEngine.cpp
+     1>c:\users\zizou\documents\c++\bigbang\bigbang\mygameengine.h(3): fatal error C1083: Impossible d'ouvrir le fichier include : 'Engine.h' : No such file or directory
+         MyControlEngine.cpp
+     1>c:\users\zizou\documents\c++\bigbang\bigbang\mycontrolengine.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'Engine.h' : No such file or directory
+         Fourmi.cpp
+     1>c:\users\zizou\documents\c++\bigbang\bigbang\fourmi.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'GraphicPrimitives.h' : No such file or directory
+         Carre.cpp
+     1>c:\users\zizou\documents\c++\bigbang\bigbang\carre.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'GraphicPrimitives.h' : No such file or directory
+         Génération de code en cours...
+     1>Génération du projet "C:\Users\Zizou\Documents\c++\bigbang\bigbang\bigbang.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:01.42
