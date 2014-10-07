@@ -14,6 +14,8 @@ public:
 	void draw();
 	virtual void tick() = 0;
 	virtual bool touchAsteroid(Asteroid& asteroid) = 0;
+	float getX();
+	float getY();
 	~Fire();
 };
 

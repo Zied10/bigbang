@@ -13,90 +13,111 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Asteroid">
+      <UniqueIdentifier>{188cfccd-309e-4c3d-af6d-2e5519799945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fire">
+      <UniqueIdentifier>{bea57627-6726-4474-a8c0-63615e93f1f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Engine">
+      <UniqueIdentifier>{5e77e1bb-1469-4fa2-840c-01c49ecbcd13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Asteroid">
+      <UniqueIdentifier>{c88ab470-9fa1-4d7c-93d1-891f19e2f4f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fire">
+      <UniqueIdentifier>{d558ccf7-5a90-4de6-a930-3633f30e9a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Engine">
+      <UniqueIdentifier>{6d286388-0c9e-4eec-b3c4-80ed514a1eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fleet">
+      <UniqueIdentifier>{68f46bfa-f5e1-4ee2-8700-4455bd19ba7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fleet">
+      <UniqueIdentifier>{89581169-fb8d-45ae-868a-0da1a9c47f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Gameboard">
+      <UniqueIdentifier>{5089a9cc-5154-48b0-b63e-1de4e253f90e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Gameboard">
+      <UniqueIdentifier>{400f39ba-fabc-4b9c-b26e-c4c88685b13a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Utility">
+      <UniqueIdentifier>{eabf5f4e-faf8-45fa-a3db-3fa821d1a2e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyGraphicEngine.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Papillon.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Carre.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Fourmi.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MyControlEngine.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MyGameEngine.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Utility.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Vaisseau.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Chasseur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Fire.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Laser.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Asteroid.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Asteroid</Filter>
     </ClInclude>
     <ClInclude Include="LittleAsteroid.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Asteroid</Filter>
+    </ClInclude>
+    <ClInclude Include="Fire.h">
+      <Filter>Fichiers d%27en-tête\Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="Laser.h">
+      <Filter>Fichiers d%27en-tête\Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="MyControlEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGameEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGraphicEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Fleet.h">
+      <Filter>Fichiers d%27en-tête\Fleet</Filter>
+    </ClInclude>
+    <ClInclude Include="Cruiser.h">
+      <Filter>Fichiers d%27en-tête\Fleet</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameboard.h">
+      <Filter>Fichiers d%27en-tête\Gameboard</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyGraphicEngine.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Papillon.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Carre.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Fourmi.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MyControlEngine.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MyGameEngine.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Vaisseau.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Chasseur.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Fire.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Laser.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Asteroid.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Asteroid</Filter>
     </ClCompile>
     <ClCompile Include="LittleAsteroid.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Asteroid</Filter>
+    </ClCompile>
+    <ClCompile Include="Fire.cpp">
+      <Filter>Fichiers sources\Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="Laser.cpp">
+      <Filter>Fichiers sources\Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="MyControlEngine.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGameEngine.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGraphicEngine.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Cruiser.cpp">
+      <Filter>Fichiers sources\Fleet</Filter>
+    </ClCompile>
+    <ClCompile Include="Fleet.cpp">
+      <Filter>Fichiers sources\Fleet</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameboard.cpp">
+      <Filter>Fichiers sources\Gameboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Fichiers sources\Utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

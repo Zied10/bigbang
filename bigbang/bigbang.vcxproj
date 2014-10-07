@@ -82,34 +82,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Asteroid.h" />
-    <ClInclude Include="Carre.h" />
-    <ClInclude Include="Chasseur.h" />
+    <ClInclude Include="Gameboard.h" />
+    <ClInclude Include="Cruiser.h" />
     <ClInclude Include="Fire.h" />
-    <ClInclude Include="Fourmi.h" />
     <ClInclude Include="Laser.h" />
     <ClInclude Include="LittleAsteroid.h" />
     <ClInclude Include="MyControlEngine.h" />
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
-    <ClInclude Include="Papillon.h" />
     <ClInclude Include="Utility.h" />
-    <ClInclude Include="Vaisseau.h" />
+    <ClInclude Include="Fleet.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
-    <ClCompile Include="Carre.cpp" />
-    <ClCompile Include="Chasseur.cpp" />
+    <ClCompile Include="Gameboard.cpp" />
+    <ClCompile Include="Cruiser.cpp" />
     <ClCompile Include="Fire.cpp" />
-    <ClCompile Include="Fourmi.cpp" />
     <ClCompile Include="Laser.cpp" />
     <ClCompile Include="LittleAsteroid.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyControlEngine.cpp" />
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />
-    <ClCompile Include="Papillon.cpp" />
     <ClCompile Include="Utility.cpp" />
-    <ClCompile Include="Vaisseau.cpp" />
+    <ClCompile Include="Fleet.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,25 +13,25 @@ int main(int argc, char * argv[])
     
     Engine e(argc,argv, 600, 600, "Big Bang");
     
-	std::vector<std::vector<Carre *> > carres;
-	std::vector<Vaisseau *> vaisseaux;
+	std::vector<std::vector<Gameboard *> > gameboards;
+	std::vector<Fleet *> fleets;
 	std::vector<Fire *> fires;
 	std::vector<Asteroid *> asteroids;
 
 	for (int line = 0; line < 10; line++){
-		carres.emplace_back();
+		gameboards.emplace_back();
 		for (int column = 0; column < 10; column++)
 		if ((line + column) % 2){
-			carres[line].push_back(new Carre(-0.817 + line * 0.183f, -0.817f + column * 0.183f, 0.183f, 1.0f));
+			gameboards[line].push_back(new Gameboard(-0.817 + line * 0.183f, -0.817f + column * 0.183f, 0.183f, 1.0f));
 		}
 		else{
-			carres[line].push_back(new Carre(-0.817 + line * 0.183f, -0.817f + column * 0.183f, 0.183f, 0.5f));
+			gameboards[line].push_back(new Gameboard(-0.817 + line * 0.183f, -0.817f + column * 0.183f, 0.183f, 0.5f));
 		}
 	}
 
-    GraphicEngine * ge = new MyGraphicEngine(carres, &vaisseaux, &fires, &asteroids);
-	GameEngine * gme = new MyGameEngine(carres, &vaisseaux,&fires, &asteroids);
-	ControlEngine * ce = new MyControlEngine(carres, &vaisseaux);
+    GraphicEngine * ge = new MyGraphicEngine(gameboards, &fleets, &fires, &asteroids);
+	GameEngine * gme = new MyGameEngine(gameboards, &fleets,&fires, &asteroids);
+	ControlEngine * ce = new MyControlEngine(gameboards, &fleets);
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);
     e.setControlEngine(ce);

@@ -1,27 +1,32 @@
-﻿La génération a démarré 07/10/2014 14:26:10.
+﻿La génération a démarré 07/10/2014 20:35:38.
      1>Projet "C:\Users\Zizou\Documents\c++\bigbang\bigbang\bigbang.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Zizou\Documents\c++\tp3\uselibgraph\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MyGameEngine.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Zizou\Documents\c++\tp3\uselibgraph\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Gameboard.cpp main.cpp MyControlEngine.cpp MyGameEngine.cpp MyGraphicEngine.cpp
+         Gameboard.cpp
+         main.cpp
+         MyControlEngine.cpp
          MyGameEngine.cpp
      1>MyGameEngine.cpp(6): warning C4018: '<' : incompatibilité signed/unsigned
      1>MyGameEngine.cpp(11): warning C4018: '<' : incompatibilité signed/unsigned
      1>MyGameEngine.cpp(15): warning C4018: '<' : incompatibilité signed/unsigned
      1>MyGameEngine.cpp(17): warning C4018: '<' : incompatibilité signed/unsigned
+         MyGraphicEngine.cpp
+     1>MyGraphicEngine.cpp(13): warning C4018: '<' : incompatibilité signed/unsigned
+     1>MyGraphicEngine.cpp(17): warning C4018: '<' : incompatibilité signed/unsigned
+     1>MyGraphicEngine.cpp(21): warning C4018: '<' : incompatibilité signed/unsigned
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Zizou\Documents\c++\bigbang\Release\bigbang.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\Zizou\Documents\c++\tp3\uselibgraph\libWin glut32.lib engine.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Zizou\Documents\c++\bigbang\Release\bigbang.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Zizou\Documents\c++\bigbang\Release\bigbang.lib" /MACHINE:X86 /SAFESEH Release\Asteroid.obj
-         Release\Carre.obj
-         Release\Chasseur.obj
+         Release\Gameboard.obj
+         Release\Cruiser.obj
          Release\Fire.obj
-         Release\Fourmi.obj
          Release\Laser.obj
          Release\LittleAsteroid.obj
          Release\main.obj
          Release\MyControlEngine.obj
          Release\MyGameEngine.obj
          Release\MyGraphicEngine.obj
-         Release\Papillon.obj
          Release\Utility.obj
-         Release\Vaisseau.obj
+         Release\Fleet.obj
          Génération de code en cours
          Fin de la génération du code
      1>engine.lib(GraphicPrimitives.obj) : warning LNK4099: PDB 'vc120.pdb' n'a pu être trouvé avec 'engine.lib(GraphicPrimitives.obj)' ou sur 'C:\Users\Zizou\Documents\c++\bigbang\Release\vc120.pdb' ; l'objet sera lié sans informations de débogage
@@ -34,4 +39,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:04.20
+Temps écoulé 00:00:21.63

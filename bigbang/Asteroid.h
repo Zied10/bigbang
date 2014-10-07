@@ -17,6 +17,7 @@ public:
 	void removeVita(int x);
 	bool isDied();
 	virtual void tick() = 0;
+	void touchShip();
 	~Asteroid();
 };
 
