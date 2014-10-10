@@ -15,6 +15,17 @@ float Fleet::getY(){
 	return y;
 }
 
+bool Fleet::isDied(){
+	std::cout << vita;
+	if (vita <= 0){
+		return true;
+	}
+	return false;
+}
+
+void Fleet::removeVitaFleet(int power){
+	vita -= power;
+}
 Fleet::~Fleet()
 {
 }

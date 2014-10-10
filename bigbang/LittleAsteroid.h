@@ -5,8 +5,9 @@ class LittleAsteroid :
 {
 private:
 public:
-	LittleAsteroid(float y) :Asteroid(y, vita){
+	LittleAsteroid(float y) :Asteroid(y){
 		vita = 100;
+		power = 50;
 	}
 	void tick();
 	~LittleAsteroid();
