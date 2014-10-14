@@ -6,6 +6,7 @@
 #include "MyGraphicEngine.h"
 #include "MyGameEngine.h"
 #include "MyControlEngine.h"
+#include "Bomber.h"
 
 
 int main(int argc, char * argv[])
@@ -18,6 +19,9 @@ int main(int argc, char * argv[])
 	std::vector<Fire *> fires;
 	std::vector<Asteroid *> asteroids;
 
+	std::vector<Fleet *> fleetsChoice;
+
+
 	for (int line = 0; line < 10; line++){
 		gameboards.emplace_back();
 		for (int column = 0; column < 10; column++)
@@ -29,7 +33,10 @@ int main(int argc, char * argv[])
 		}
 	}
 
-    GraphicEngine * ge = new MyGraphicEngine(gameboards, &fleets, &fires, &asteroids);
+	fleetsChoice.push_back(new Cruiser(1, -1.f, 0.7f));
+	fleetsChoice.push_back(new Bomber(2, -1.f, 0.4f));
+
+	GraphicEngine * ge = new MyGraphicEngine(gameboards, &fleets, &fires, &asteroids, &fleetsChoice);
 	GameEngine * gme = new MyGameEngine(gameboards, &fleets,&fires, &asteroids);
 	ControlEngine * ce = new MyControlEngine(gameboards, &fleets);
     e.setGraphicEngine(ge);

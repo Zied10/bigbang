@@ -10,6 +10,7 @@ public:
 		power = 50;
 	}
 	void tick();
+	void draw();
 	~LittleAsteroid();
 };
 

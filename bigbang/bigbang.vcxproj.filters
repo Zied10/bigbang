@@ -81,6 +81,12 @@
     <ClInclude Include="Gameboard.h">
       <Filter>Fichiers d%27en-tête\Gameboard</Filter>
     </ClInclude>
+    <ClInclude Include="Bomber.h">
+      <Filter>Fichiers d%27en-tête\Fleet</Filter>
+    </ClInclude>
+    <ClInclude Include="Gauss.h">
+      <Filter>Fichiers d%27en-tête\Fire</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -118,6 +124,12 @@
     </ClCompile>
     <ClCompile Include="Utility.cpp">
       <Filter>Fichiers sources\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomber.cpp">
+      <Filter>Fichiers sources\Fleet</Filter>
+    </ClCompile>
+    <ClCompile Include="Gauss.cpp">
+      <Filter>Fichiers sources\Fire</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -12,6 +12,7 @@ void MyGraphicEngine::Draw(){
 
 	for (int i = 0; i < fleets->size(); i++) {
 		(*fleets)[i]->draw();
+		(*fleets)[i]->drawVita();
 	}
 
 	for (int i = 0; i < fires->size(); i++) {
@@ -20,6 +21,11 @@ void MyGraphicEngine::Draw(){
 	
 	for (int i = 0; i < asteroids->size(); i++) {
 		(*asteroids)[i]->draw();
+	}
+
+	/*Affichage des choix de vaisseaux*/
+	for (int i = 0; i < (int)fleetsChoice->size(); i++) {
+		(*fleetsChoice)[i]->draw();
 	}
 
 }

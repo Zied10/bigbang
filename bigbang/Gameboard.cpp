@@ -38,6 +38,26 @@ void Gameboard::addClick(){
 	nbClick++;
 }
 
+void Gameboard::removeClick(){
+	nbClick--;
+}
+
+void Gameboard::rmClick(std::vector<std::vector<Gameboard *> > gm, float x, float y){
+	bool stop = false;
+	for (int i = 0; i < 10; i++){
+		for (int j = 0; j < 10; j++){
+			if (gm[i][j]->getPosX() == x && gm[i][j]->getPosY() == y){
+				gm[i][j]->removeClick();
+				stop = true;
+				break;
+			}
+		}
+		if (stop){
+			break;
+		}
+	}
+}
+
 int Gameboard::getNbClick(){
 	return nbClick;
 }

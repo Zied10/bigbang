@@ -1,15 +1,15 @@
 #pragma once
 #include "Fire.h"
-#include "LittleAsteroid.h"
 class Laser :
 	public Fire
 {
 public:
-	Laser(float x, float y, float size) :Fire(x, y, size){
+	Laser(float x, float y) :Fire(x, y){
 		power = 50;
+		size = 0.01f;
 	}
 	void tick();
-	bool touchAsteroid(Asteroid& asteroid);
+	void draw();
 	~Laser();
 };
 

@@ -1,9 +1,5 @@
 #include "Asteroid.h"
 
-void Asteroid::draw(){
-	GraphicPrimitives::drawFillRect2D(x + 0.05f, y + 0.05f, 0.1f, 0.1f, 0.0f, 0.0f, 1.0f);
-}
-
 float Asteroid::getX(){
 	return x;
 }
