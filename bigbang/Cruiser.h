@@ -4,7 +4,8 @@ class Cruiser :
 	public Fleet
 {
 public:
-	Cruiser(int id, float x, float y) :Fleet(id, x, y){
+	Cruiser(float x, float y) :Fleet(x, y){
+		id = 1;
 		vita = 100;
 	}
 

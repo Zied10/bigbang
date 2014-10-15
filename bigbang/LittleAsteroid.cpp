@@ -2,7 +2,7 @@
 
 
 void LittleAsteroid::tick(){
-	x -= 0.003f;
+	x -= 0.002f;
 }
 
 void LittleAsteroid::draw(){

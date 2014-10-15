@@ -5,8 +5,8 @@ class Gauss :
 {
 public:
 	Gauss(float x, float y) :Fire(x, y){
-		power = 50;
-		size = 0.15f;
+		power = 100;
+		size = 0.015f;
 	}
 	void tick();
 	void draw();

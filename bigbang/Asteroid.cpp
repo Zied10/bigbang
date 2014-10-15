@@ -13,7 +13,7 @@ int Asteroid::getVita(){
 }
 
 bool Asteroid::isDied(){
-	if (vita < 0){
+	if (vita <= 0){
 		return true;
 	}
 	return false;

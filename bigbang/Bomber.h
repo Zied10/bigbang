@@ -4,8 +4,9 @@ class Bomber :
 	public Fleet
 {
 public:
-	Bomber(int id, float x, float y) :Fleet(id, x, y){
-		vita = 200;
+	Bomber(float x, float y) :Fleet(x, y){
+		id = 2;
+		vita = 150;
 	}
 
 	void draw();

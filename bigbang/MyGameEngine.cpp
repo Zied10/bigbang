@@ -33,9 +33,22 @@ void MyGameEngine::idle(){
 	}
 
 	/*  Creation des tirs pour les vaisseaux   */
-	if ((tick % 100) == 0){
-		for (int i = 0; i < (int)fleets->size(); i++) {
-			fires->push_back(new Laser((*fleets)[i]->getX(), (*fleets)[i]->getY()));
+	
+	for (int i = 0; i < (int)fleets->size(); i++) {
+		switch ((*fleets)[i]->getId())
+		{
+		case 1:
+			if ((tick % 150) == 0){
+				fires->push_back(new Laser((*fleets)[i]->getX(), (*fleets)[i]->getY()));
+				break;
+			}
+			else break;
+		case 2:
+			if ((tick % 400) == 0){
+				fires->push_back(new Gauss((*fleets)[i]->getX(), (*fleets)[i]->getY()));
+				break;
+			}
+			else break;
 		}
 	}
 
@@ -66,9 +79,9 @@ void MyGameEngine::idle(){
 	}
 
 	/* Creation d'asteroides */
-	if ((tick % 200) == 0){
-		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
-		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
+	if ((tick % 170) == 0){
+		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
+		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
 	}
 	tick++;
 }

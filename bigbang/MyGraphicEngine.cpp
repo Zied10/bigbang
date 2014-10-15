@@ -10,16 +10,16 @@ void MyGraphicEngine::Draw(){
 		
 	}
 
-	for (int i = 0; i < fleets->size(); i++) {
+	for (int i = 0; i < (int)fleets->size(); i++) {
 		(*fleets)[i]->draw();
 		(*fleets)[i]->drawVita();
 	}
 
-	for (int i = 0; i < fires->size(); i++) {
+	for (int i = 0; i < (int)fires->size(); i++) {
 		(*fires)[i]->draw();
 	}
 	
-	for (int i = 0; i < asteroids->size(); i++) {
+	for (int i = 0; i < (int)asteroids->size(); i++) {
 		(*asteroids)[i]->draw();
 	}
 

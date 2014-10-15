@@ -46,11 +46,17 @@
     <Filter Include="Fichiers sources\Utility">
       <UniqueIdentifier>{eabf5f4e-faf8-45fa-a3db-3fa821d1a2e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Utility">
+      <UniqueIdentifier>{dc49eb6f-076e-4b98-bd8f-b9c186122384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\GameManagement">
+      <UniqueIdentifier>{d2f6f01e-d838-4da2-a409-dedb94ed88c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\GameManagement">
+      <UniqueIdentifier>{0df17773-4cde-49d2-b853-9fe9bdc4132a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Utility.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Asteroid.h">
       <Filter>Fichiers d%27en-tête\Asteroid</Filter>
     </ClInclude>
@@ -86,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="Gauss.h">
       <Filter>Fichiers d%27en-tête\Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Fichiers d%27en-tête\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="FleetSelect.h">
+      <Filter>Fichiers d%27en-tête\GameManagement</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="Gauss.cpp">
       <Filter>Fichiers sources\Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="FleetSelect.cpp">
+      <Filter>Fichiers sources\GameManagement</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -8,8 +8,7 @@ protected:
 	float x, y;
 	int vita;
 public:
-	Fleet(int id_, float x_, float y_) :
-		id(id_),
+	Fleet(float x_, float y_) :
 		x(x_),
 		y(y_){}
 	virtual void draw() = 0;

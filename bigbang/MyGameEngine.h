@@ -5,6 +5,7 @@
 #include "Cruiser.h"
 #include "Fleet.h"
 #include "Laser.h"
+#include "Gauss.h"
 #include "Fire.h"
 #include "Asteroid.h"
 #include "LittleAsteroid.h"
