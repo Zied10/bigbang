@@ -1,5 +1,4 @@
 #include "Gameboard.h"
-#include "Utility.h"
 
 
 Gameboard::Gameboard(float posX_, float posY_, float width_, float color_) :
@@ -15,7 +14,6 @@ void Gameboard::draw(){
 	char* afficheClick = new char[100];
 	Utility::itoa(nbClick, afficheClick);
 	GraphicPrimitives::drawFillRect2D(posX, posY, width, width, color, color, color);
-	GraphicPrimitives::drawText2D(afficheClick, posX, posY, 0.0f, 0.0f, 0.0f);
 }
 
 float Gameboard::getPosX(){

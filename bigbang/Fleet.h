@@ -7,6 +7,7 @@ protected:
 	int id;
 	float x, y;
 	int vita;
+	int price;
 public:
 	Fleet(float x_, float y_) :
 		x(x_),
@@ -16,6 +17,7 @@ public:
 	float getX();
 	float getY();
 	int getId();
+	int getPrice();
 	void setVita(int newVita);
 	void removeVitaFleet(int power);
 	bool isDied();

@@ -1,4 +1,4 @@
-﻿La génération a démarré 14/10/2014 21:07:15.
+﻿La génération a démarré 21/10/2014 10:19:37.
      1>Projet "C:\Users\Zizou\Documents\c++\bigbang\bigbang\bigbang.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Zizou\Documents\c++\tp3\uselibgraph\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MyGameEngine.cpp
@@ -10,6 +10,7 @@
          Release\Gameboard.obj
          Release\Cruiser.obj
          Release\Fire.obj
+         Release\GameManagement.obj
          Release\Gauss.obj
          Release\Laser.obj
          Release\LittleAsteroid.obj
@@ -31,4 +32,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:02.95
+Temps écoulé 00:00:03.01

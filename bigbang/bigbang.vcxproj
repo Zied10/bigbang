@@ -87,6 +87,7 @@
     <ClInclude Include="Gameboard.h" />
     <ClInclude Include="Cruiser.h" />
     <ClInclude Include="Fire.h" />
+    <ClInclude Include="GameManagement.h" />
     <ClInclude Include="Gauss.h" />
     <ClInclude Include="Laser.h" />
     <ClInclude Include="LittleAsteroid.h" />
@@ -103,6 +104,7 @@
     <ClCompile Include="Gameboard.cpp" />
     <ClCompile Include="Cruiser.cpp" />
     <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="GameManagement.cpp" />
     <ClCompile Include="Gauss.cpp" />
     <ClCompile Include="Laser.cpp" />
     <ClCompile Include="LittleAsteroid.cpp" />

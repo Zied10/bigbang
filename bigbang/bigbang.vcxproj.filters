@@ -99,6 +99,9 @@
     <ClInclude Include="FleetSelect.h">
       <Filter>Fichiers d%27en-tête\GameManagement</Filter>
     </ClInclude>
+    <ClInclude Include="GameManagement.h">
+      <Filter>Fichiers d%27en-tête\GameManagement</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -144,6 +147,9 @@
       <Filter>Fichiers sources\Fire</Filter>
     </ClCompile>
     <ClCompile Include="FleetSelect.cpp">
+      <Filter>Fichiers sources\GameManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManagement.cpp">
       <Filter>Fichiers sources\GameManagement</Filter>
     </ClCompile>
   </ItemGroup>

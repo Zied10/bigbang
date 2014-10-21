@@ -38,13 +38,13 @@ void MyGameEngine::idle(){
 		switch ((*fleets)[i]->getId())
 		{
 		case 1:
-			if ((tick % 150) == 0){
+			if ((tick % 550) == 0){
 				fires->push_back(new Laser((*fleets)[i]->getX(), (*fleets)[i]->getY()));
 				break;
 			}
 			else break;
 		case 2:
-			if ((tick % 400) == 0){
+			if ((tick % 800) == 0){
 				fires->push_back(new Gauss((*fleets)[i]->getX(), (*fleets)[i]->getY()));
 				break;
 			}
@@ -63,11 +63,12 @@ void MyGameEngine::idle(){
 				if ((*asteroids)[j]->isDied()){
 					delete (*asteroids)[j];
 					(*asteroids).erase((*asteroids).begin() + j);
+					(*gameManagement).addMoney(5);
 				}
 				break;
 			}
 		}
-		if ((*fires)[i]->getX() > 1.0f){
+		if ((*fires)[i]->getX() > 1.01f){
 			yetTouched = true;
 			delete (*fires)[i];
 			(*fires).erase((*fires).begin() + i);
@@ -79,7 +80,7 @@ void MyGameEngine::idle(){
 	}
 
 	/* Creation d'asteroides */
-	if ((tick % 170) == 0){
+	if ((tick % 1600) == 0){
 		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
 		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
 	}

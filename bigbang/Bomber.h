@@ -7,6 +7,7 @@ public:
 	Bomber(float x, float y) :Fleet(x, y){
 		id = 2;
 		vita = 150;
+		price = 30;
 	}
 
 	void draw();

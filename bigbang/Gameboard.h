@@ -1,5 +1,7 @@
 #pragma once
 #include "GraphicPrimitives.h"
+#include "Utility.h"
+
 class Gameboard
 {
 private:

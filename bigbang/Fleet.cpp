@@ -28,6 +28,10 @@ int Fleet::getId(){
 	return id;
 }
 
+int Fleet::getPrice(){
+	return price;
+}
+
 Fleet::~Fleet()
 {
 }

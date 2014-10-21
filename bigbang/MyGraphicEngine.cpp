@@ -3,6 +3,7 @@
 
 void MyGraphicEngine::Draw(){
     
+
 	for (int i = 0; i < 10; i++){
 		for (int j = 0; j < 10; j++){
 			gameboards[i][j]->draw();
@@ -28,5 +29,6 @@ void MyGraphicEngine::Draw(){
 		(*fleetsChoice)[i]->draw();
 	}
 
+	(*gameManagement).drawMoney();
 }
 

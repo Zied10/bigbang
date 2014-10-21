@@ -2,10 +2,10 @@
 #include "Engine.h"
 #include "GraphicPrimitives.h"
 #include "Gameboard.h"
-#include "Cruiser.h"
 #include "Fleet.h"
 #include "Fire.h"
 #include "Asteroid.h"
+#include "GameManagement.h"
 
 
 class MyGraphicEngine:public GraphicEngine {
@@ -15,16 +15,18 @@ class MyGraphicEngine:public GraphicEngine {
 	std::vector<Fire *> *fires;
 	std::vector<Asteroid *> *asteroids;
 	std::vector<Fleet *> *fleetsChoice;
+	GameManagement *gameManagement;
     
     char * str;
 public:
     
-	MyGraphicEngine(std::vector<std::vector<Gameboard *> > gameboards_, std::vector<Fleet *> *fleets_, std::vector<Fire *> *fires_, std::vector<Asteroid *> *asteroids_, std::vector<Fleet *> *fleetsChoice_) :
+	MyGraphicEngine(std::vector<std::vector<Gameboard *> > gameboards_, std::vector<Fleet *> *fleets_, std::vector<Fire *> *fires_, std::vector<Asteroid *> *asteroids_, std::vector<Fleet *> *fleetsChoice_, GameManagement *gameManagement_) :
 		gameboards(gameboards_),
 		fleets(fleets_),
 		fires(fires_),
 		asteroids(asteroids_),
-		fleetsChoice(fleetsChoice_)
+		fleetsChoice(fleetsChoice_),
+		gameManagement(gameManagement_)
         {}
     
     float x1,x2,vx1,vx2;
