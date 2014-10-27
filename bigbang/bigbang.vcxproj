@@ -88,9 +88,11 @@
     <ClInclude Include="Cruiser.h" />
     <ClInclude Include="Fire.h" />
     <ClInclude Include="GameManagement.h" />
+    <ClInclude Include="GameMode.h" />
     <ClInclude Include="Gauss.h" />
     <ClInclude Include="Laser.h" />
     <ClInclude Include="LittleAsteroid.h" />
+    <ClInclude Include="MiddleAsteroid.h" />
     <ClInclude Include="MyControlEngine.h" />
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
@@ -109,6 +111,7 @@
     <ClCompile Include="Laser.cpp" />
     <ClCompile Include="LittleAsteroid.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MiddleAsteroid.cpp" />
     <ClCompile Include="MyControlEngine.cpp" />
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />

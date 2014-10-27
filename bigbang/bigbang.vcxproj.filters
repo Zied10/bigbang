@@ -102,6 +102,12 @@
     <ClInclude Include="GameManagement.h">
       <Filter>Fichiers d%27en-tête\GameManagement</Filter>
     </ClInclude>
+    <ClInclude Include="MiddleAsteroid.h">
+      <Filter>Fichiers d%27en-tête\Asteroid</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMode.h">
+      <Filter>Fichiers d%27en-tête\GameManagement</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -151,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="GameManagement.cpp">
       <Filter>Fichiers sources\GameManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MiddleAsteroid.cpp">
+      <Filter>Fichiers sources\Asteroid</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

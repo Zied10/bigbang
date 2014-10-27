@@ -30,5 +30,6 @@ void MyGraphicEngine::Draw(){
 	}
 
 	(*gameManagement).drawMoney();
+	(*gameManagement).drawLife();
 }
 

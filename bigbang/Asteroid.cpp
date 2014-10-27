@@ -31,6 +31,19 @@ bool Asteroid::touchFleet(Fleet& fleet){
 	return false;
 }
 
+int Asteroid::numberAste = 0;
+
+void Asteroid::addNumberAste(){
+	numberAste += 1;
+}
+
+int Asteroid::getNumberAste(){
+	return numberAste;
+}
+void Asteroid::resetNumberAste(){
+	numberAste = 0;
+}
+
 Asteroid::~Asteroid()
 {
 }

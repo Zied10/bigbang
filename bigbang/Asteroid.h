@@ -6,10 +6,12 @@ class Asteroid
 protected:
 	float x, y;
 	int vita, power;
+	static int numberAste;
 public:
 	Asteroid(float y_) :
 		x(1.01f),
 		y(y_){
+		addNumberAste();
 	}
 	float getX();
 	float getY();
@@ -19,6 +21,9 @@ public:
 	virtual void tick() = 0;
 	virtual void draw() = 0;
 	bool touchFleet(Fleet& fleet);
+	static int getNumberAste();
+	void addNumberAste();
+	static void resetNumberAste();
 	~Asteroid();
 };
 

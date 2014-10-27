@@ -4,13 +4,43 @@
 
 void MyGameEngine::idle(){
 
+	switch ((*gameMode)){
+	case IN_GAME:
+		collisionAsteFleet();
+		creationFire();
+		collisionFireAste();
+		creationAste(1600);
+		if (Asteroid::getNumberAste() == 5){
+			(*gameMode) = WAIT_WAVE;
+		}
+		tick++;
+		break;
 
-	/*Collision asteroide avec vaisseaux*/
 
+	case PAUSE:
+		break;
+
+	case WAIT_WAVE:
+		collisionAsteFleet();
+		creationFire();
+		collisionFireAste();
+		tick++;
+		break;
+
+	case FINISH:
+		break;
+	}
+
+		
+	}
+
+/*Collision asteroide avec vaisseaux*/
+void MyGameEngine::collisionAsteFleet(){
 	for (int i = 0; i < (int)asteroids->size(); i++) {
 		bool yetTouched = false;
 		if ((*asteroids)[i]->getX() < -0.85f){
 			yetTouched = true;
+			(*gameManagement).removeLife();
 			delete (*asteroids)[i];
 			(*asteroids).erase((*asteroids).begin() + i);
 		}
@@ -31,27 +61,32 @@ void MyGameEngine::idle(){
 			(*asteroids)[i]->tick();
 		}
 	}
+}
 
-	/*  Creation des tirs pour les vaisseaux   */
-	
-	for (int i = 0; i < (int)fleets->size(); i++) {
-		switch ((*fleets)[i]->getId())
-		{
-		case 1:
-			if ((tick % 550) == 0){
-				fires->push_back(new Laser((*fleets)[i]->getX(), (*fleets)[i]->getY()));
-				break;
+/*  Creation des tirs pour les vaisseaux   */
+void MyGameEngine::creationFire(){
+	if ((*asteroids).size() > 0){
+		for (int i = 0; i < (int)fleets->size(); i++) {
+			switch ((*fleets)[i]->getId())
+			{
+			case 1:
+				if ((tick % 550) == 0){
+					fires->push_back(new Laser((*fleets)[i]->getX(), (*fleets)[i]->getY()));
+					break;
+				}
+				else break;
+			case 2:
+				if ((tick % 800) == 0){
+					fires->push_back(new Gauss((*fleets)[i]->getX(), (*fleets)[i]->getY()));
+					break;
+				}
+				else break;
 			}
-			else break;
-		case 2:
-			if ((tick % 800) == 0){
-				fires->push_back(new Gauss((*fleets)[i]->getX(), (*fleets)[i]->getY()));
-				break;
-			}
-			else break;
 		}
 	}
+}
 
+void MyGameEngine::collisionFireAste(){
 	/* Collision entre tirs et asteroides */
 	for (int i = 0; i < (int)fires->size(); i++) {
 		bool yetTouched = false;
@@ -78,11 +113,12 @@ void MyGameEngine::idle(){
 			(*fires)[i]->tick();
 		}
 	}
+}
 
-	/* Creation d'asteroides */
-	if ((tick % 1600) == 0){
-		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
-		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
+/* Creation d'asteroides */
+void MyGameEngine::creationAste(int t){
+	if ((tick % t) == 0){
+		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
+		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
 	}
-	tick++;
 }
