@@ -9,6 +9,8 @@
 #include "Fire.h"
 #include "Asteroid.h"
 #include "LittleAsteroid.h"
+#include "MiddleAsteroid.h"
+#include "BigAsteroid.h"
 #include "GameManagement.h"
 #include "GameMode.h"
 

@@ -10,18 +10,26 @@ float Fleet::getY(){
 }
 
 bool Fleet::isDied(){
-	if (vita <= 0){
+	if (currentVita <= 0){
 		return true;
 	}
 	return false;
 }
 
 void Fleet::removeVitaFleet(int power){
-	vita -= power;
+	currentVita -= power;
 }
 
-void Fleet::setVita(int newVita){
-	vita = newVita;
+void Fleet::setCurrentVita(int newVita){
+	currentVita = newVita;
+}
+
+int Fleet::getCurrentVita(){
+	return currentVita;
+}
+
+int Fleet::getMaxVita(){
+	return maxVita;
 }
 
 int Fleet::getId(){

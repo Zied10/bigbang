@@ -1,5 +1,30 @@
 #include "Asteroid.h"
 
+void Asteroid::draw(){
+	std::vector<float> vectX;
+	std::vector<float> vectY;
+
+	vectX.emplace_back(x);
+	vectY.emplace_back(y + 0.09f);
+
+	vectX.emplace_back(x+ 0.01f + size);
+	vectY.emplace_back(y + 0.09f + 0.04f + size/2);
+
+	vectX.emplace_back(x+ 0.06f + size);
+	vectY.emplace_back(y + 0.09f + 0.04f + size/2);
+
+	vectX.emplace_back(x + 0.06f + 2*size+ 0.01f);
+	vectY.emplace_back(y + 0.09f);
+
+	vectX.emplace_back(x+ 0.06f + size);
+	vectY.emplace_back(y + 0.09f - 0.04f - size/2);
+
+	vectX.emplace_back(x + 0.01f + size);
+	vectY.emplace_back(y + 0.09f - 0.04f - size/2);
+
+	GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.24f, 0.21, 0.21f);
+}
+
 float Asteroid::getX(){
 	return x;
 }

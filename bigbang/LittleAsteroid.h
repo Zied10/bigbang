@@ -8,9 +8,9 @@ public:
 	LittleAsteroid(float y) :Asteroid(y){
 		vita = 150;
 		power = 50;
+		size = 0.01;
 	}
 	void tick();
-	void draw();
 	~LittleAsteroid();
 };
 

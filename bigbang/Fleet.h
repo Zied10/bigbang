@@ -6,7 +6,7 @@ class Fleet
 protected:
 	int id;
 	float x, y;
-	int vita;
+	int currentVita, maxVita;
 	int price;
 public:
 	Fleet(float x_, float y_) :
@@ -18,7 +18,9 @@ public:
 	float getY();
 	int getId();
 	int getPrice();
-	void setVita(int newVita);
+	void setCurrentVita(int newCurrentVita);
+	int getCurrentVita();
+	int getMaxVita();
 	void removeVitaFleet(int power);
 	bool isDied();
 	~Fleet();

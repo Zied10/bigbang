@@ -82,6 +82,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Asteroid.h" />
+    <ClInclude Include="BigAsteroid.h" />
     <ClInclude Include="Bomber.h" />
     <ClInclude Include="FleetSelect.h" />
     <ClInclude Include="Gameboard.h" />
@@ -101,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
+    <ClCompile Include="BigAsteroid.cpp" />
     <ClCompile Include="Bomber.cpp" />
     <ClCompile Include="FleetSelect.cpp" />
     <ClCompile Include="Gameboard.cpp" />

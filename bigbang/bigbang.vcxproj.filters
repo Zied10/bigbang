@@ -108,6 +108,9 @@
     <ClInclude Include="GameMode.h">
       <Filter>Fichiers d%27en-tête\GameManagement</Filter>
     </ClInclude>
+    <ClInclude Include="BigAsteroid.h">
+      <Filter>Fichiers d%27en-tête\Asteroid</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -159,6 +162,9 @@
       <Filter>Fichiers sources\GameManagement</Filter>
     </ClCompile>
     <ClCompile Include="MiddleAsteroid.cpp">
+      <Filter>Fichiers sources\Asteroid</Filter>
+    </ClCompile>
+    <ClCompile Include="BigAsteroid.cpp">
       <Filter>Fichiers sources\Asteroid</Filter>
     </ClCompile>
   </ItemGroup>

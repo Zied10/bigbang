@@ -47,8 +47,11 @@ void MyGameEngine::collisionAsteFleet(){
 		for (int j = 0; j < (int)fleets->size(); j++){
 			if ((*asteroids)[i]->touchFleet(*(*fleets)[j])){
 				yetTouched = true;
-				delete (*asteroids)[i];
-				(*asteroids).erase((*asteroids).begin() + i);
+				(*asteroids)[i]->removeVita((*fleets)[j]->getMaxVita());
+				if ((*asteroids)[i]->isDied()){
+					delete (*asteroids)[i];
+					(*asteroids).erase((*asteroids).begin() + i);
+				}
 				if ((*fleets)[j]->isDied()){
 					Gameboard::rmClick(gameboards, (*fleets)[j]->getX(), (*fleets)[j]->getY());
 					delete (*fleets)[j];
@@ -118,7 +121,9 @@ void MyGameEngine::collisionFireAste(){
 /* Creation d'asteroides */
 void MyGameEngine::creationAste(int t){
 	if ((tick % t) == 0){
-		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
-		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
+		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
+		asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * 6)));
+		asteroids->push_back(new BigAsteroid(-0.817 + (0.183 * 7)));
+		//asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * (rand() % 10))));
 	}
 }

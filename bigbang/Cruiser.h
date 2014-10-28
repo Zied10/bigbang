@@ -6,7 +6,8 @@ class Cruiser :
 public:
 	Cruiser(float x, float y) :Fleet(x, y){
 		id = 1;
-		vita = 100;
+		currentVita = 100;
+		maxVita = 100;
 		price = 10;
 	}
 

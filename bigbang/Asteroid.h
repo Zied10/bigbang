@@ -4,7 +4,7 @@
 class Asteroid
 {
 protected:
-	float x, y;
+	float x, y, size;
 	int vita, power;
 	static int numberAste;
 public:
@@ -19,7 +19,7 @@ public:
 	void removeVita(int power);
 	bool isDied();
 	virtual void tick() = 0;
-	virtual void draw() = 0;
+	void draw();
 	bool touchFleet(Fleet& fleet);
 	static int getNumberAste();
 	void addNumberAste();
