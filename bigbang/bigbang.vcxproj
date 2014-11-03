@@ -84,6 +84,7 @@
     <ClInclude Include="Asteroid.h" />
     <ClInclude Include="BigAsteroid.h" />
     <ClInclude Include="Bomber.h" />
+    <ClInclude Include="Destroyer.h" />
     <ClInclude Include="FleetSelect.h" />
     <ClInclude Include="Gameboard.h" />
     <ClInclude Include="Cruiser.h" />
@@ -97,6 +98,7 @@
     <ClInclude Include="MyControlEngine.h" />
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
+    <ClInclude Include="Plasma.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="Fleet.h" />
   </ItemGroup>
@@ -104,6 +106,7 @@
     <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="BigAsteroid.cpp" />
     <ClCompile Include="Bomber.cpp" />
+    <ClCompile Include="Destroyer.cpp" />
     <ClCompile Include="FleetSelect.cpp" />
     <ClCompile Include="Gameboard.cpp" />
     <ClCompile Include="Cruiser.cpp" />
@@ -117,6 +120,7 @@
     <ClCompile Include="MyControlEngine.cpp" />
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />
+    <ClCompile Include="Plasma.cpp" />
     <ClCompile Include="Utility.cpp" />
     <ClCompile Include="Fleet.cpp" />
   </ItemGroup>

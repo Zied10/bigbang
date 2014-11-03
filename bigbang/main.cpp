@@ -6,11 +6,12 @@
 #include "MyGraphicEngine.h"
 #include "MyGameEngine.h"
 #include "MyControlEngine.h"
+#include <ctime>
 
 
 int main(int argc, char * argv[])
 {
-    
+	srand(time(NULL));
     Engine e(argc,argv, 600, 600, "Big Bang");
     
 	std::vector<std::vector<Gameboard *> > gameboards;
@@ -24,7 +25,7 @@ int main(int argc, char * argv[])
 	GameMode gameMode;
 	gameMode = IN_GAME;
 
-
+	/* Creation du tableau de jeu */
 	for (int line = 0; line < 10; line++){
 		gameboards.emplace_back();
 		for (int column = 0; column < 10; column++)
@@ -35,9 +36,10 @@ int main(int argc, char * argv[])
 			gameboards[line].push_back(new Gameboard(-0.817 + line * 0.183f, -0.817f + column * 0.183f, 0.183f, 0.5f));
 		}
 	}
-
+	/* Creation des choix de vaisseaux */
 	fleetsChoice.push_back(new Cruiser(-1.f, 0.4f));
 	fleetsChoice.push_back(new Bomber(-1.f, 0.2f));
+	fleetsChoice.push_back(new Destroyer(-1.f, 0.f));
 
 	GraphicEngine * ge = new MyGraphicEngine(gameboards, &fleets, &fires, &asteroids, &fleetsChoice, &gameManagement, &gameMode);
 	GameEngine * gme = new MyGameEngine(gameboards, &fleets, &fires, &asteroids, &gameManagement, &gameMode);

@@ -13,16 +13,17 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		if (posX > -0.817 && posY > -0.817){
 			if (!gameboards[i][j]->getNbClick()){
 				if ((*gameManagement).getMoney() >= fleetSelect.getPrice()){
+					gameboards[i][j]->addClick();
+					(*gameManagement).removeMoney(fleetSelect.getPrice());
 					switch (fleetSelect.getId()){
 					case 1:
-						gameboards[i][j]->addClick();
 						fleets->push_back(new Cruiser(gameboards[i][j]->getPosX(), gameboards[i][j]->getPosY()));
-						(*gameManagement).removeMoney(fleetSelect.getPrice());
 						break;
 					case 2:
-						gameboards[i][j]->addClick();
 						fleets->push_back(new Bomber(gameboards[i][j]->getPosX(), gameboards[i][j]->getPosY()));
-						(*gameManagement).removeMoney(fleetSelect.getPrice());
+						break;
+					case 3:
+						fleets->push_back(new Destroyer(gameboards[i][j]->getPosX(), gameboards[i][j]->getPosY()));
 						break;
 					}
 				}

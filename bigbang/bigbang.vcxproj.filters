@@ -111,6 +111,12 @@
     <ClInclude Include="BigAsteroid.h">
       <Filter>Fichiers d%27en-tête\Asteroid</Filter>
     </ClInclude>
+    <ClInclude Include="Destroyer.h">
+      <Filter>Fichiers d%27en-tête\Fleet</Filter>
+    </ClInclude>
+    <ClInclude Include="Plasma.h">
+      <Filter>Fichiers d%27en-tête\Fire</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -166,6 +172,12 @@
     </ClCompile>
     <ClCompile Include="BigAsteroid.cpp">
       <Filter>Fichiers sources\Asteroid</Filter>
+    </ClCompile>
+    <ClCompile Include="Destroyer.cpp">
+      <Filter>Fichiers sources\Fleet</Filter>
+    </ClCompile>
+    <ClCompile Include="Plasma.cpp">
+      <Filter>Fichiers sources\Fire</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

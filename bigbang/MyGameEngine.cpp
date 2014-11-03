@@ -13,6 +13,9 @@ void MyGameEngine::idle(){
 		if (Asteroid::getNumberAste() == 5){
 			(*gameMode) = WAIT_WAVE;
 		}
+		if ((*gameManagement).getLife() == 0){
+			(*gameMode) = FINISH;
+		}
 		tick++;
 		break;
 
@@ -84,6 +87,12 @@ void MyGameEngine::creationFire(){
 					break;
 				}
 				else break;
+			case 3:
+				if ((tick % 2000) == 0){
+					fires->push_back(new Plasma((*fleets)[i]->getX(), (*fleets)[i]->getY()));
+					break;
+				}
+				else break;
 			}
 		}
 	}
@@ -121,9 +130,9 @@ void MyGameEngine::collisionFireAste(){
 /* Creation d'asteroides */
 void MyGameEngine::creationAste(int t){
 	if ((tick % t) == 0){
-		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
-		asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * 6)));
-		asteroids->push_back(new BigAsteroid(-0.817 + (0.183 * 7)));
-		//asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * (rand() % 10))));
+		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
+		//asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * 6)));
+		//asteroids->push_back(new BigAsteroid(-0.817 + (0.183 * 7)));
+		asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * (rand() % 10))));
 	}
 }

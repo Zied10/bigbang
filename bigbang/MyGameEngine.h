@@ -2,8 +2,8 @@
 
 #include "Engine.h"
 #include "Gameboard.h"
-#include "Cruiser.h"
 #include "Fleet.h"
+#include "Plasma.h"
 #include "Laser.h"
 #include "Gauss.h"
 #include "Fire.h"
