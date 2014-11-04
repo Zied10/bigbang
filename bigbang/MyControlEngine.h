@@ -5,6 +5,7 @@
 #include "Cruiser.h"
 #include "Bomber.h"
 #include "Destroyer.h"
+#include "Shield.h"
 #include "FleetSelect.h"
 #include "GameManagement.h"
 #include "GameMode.h"

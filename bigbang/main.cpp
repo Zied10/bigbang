@@ -38,8 +38,9 @@ int main(int argc, char * argv[])
 	}
 	/* Creation des choix de vaisseaux */
 	fleetsChoice.push_back(new Cruiser(-1.f, 0.4f));
-	fleetsChoice.push_back(new Bomber(-1.f, 0.2f));
-	fleetsChoice.push_back(new Destroyer(-1.f, 0.f));
+	fleetsChoice.push_back(new Shield(-1.f, 0.2f));
+	fleetsChoice.push_back(new Bomber(-1.f, 0.f));
+	fleetsChoice.push_back(new Destroyer(-1.f, -0.2f));
 
 	GraphicEngine * ge = new MyGraphicEngine(gameboards, &fleets, &fires, &asteroids, &fleetsChoice, &gameManagement, &gameMode);
 	GameEngine * gme = new MyGameEngine(gameboards, &fleets, &fires, &asteroids, &gameManagement, &gameMode);

@@ -25,6 +25,9 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 					case 3:
 						fleets->push_back(new Destroyer(gameboards[i][j]->getPosX(), gameboards[i][j]->getPosY()));
 						break;
+					case 4:
+						fleets->push_back(new Shield(gameboards[i][j]->getPosX(), gameboards[i][j]->getPosY()));
+						break;
 					}
 				}
 			}

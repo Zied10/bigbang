@@ -90,6 +90,12 @@ void MyGameEngine::creationFire(){
 			case 3:
 				if ((tick % 2000) == 0){
 					fires->push_back(new Plasma((*fleets)[i]->getX(), (*fleets)[i]->getY()));
+					if ((*fleets)[i]->getY() < 0.8){
+						fires->push_back(new Plasma((*fleets)[i]->getX(), (*fleets)[i]->getY() + 0.183));
+					}
+					if ((*fleets)[i]->getY() > -0.63){
+						fires->push_back(new Plasma((*fleets)[i]->getX(), (*fleets)[i]->getY() - 0.183));
+					}
 					break;
 				}
 				else break;
@@ -98,8 +104,8 @@ void MyGameEngine::creationFire(){
 	}
 }
 
+/* Collision entre tirs et asteroides */
 void MyGameEngine::collisionFireAste(){
-	/* Collision entre tirs et asteroides */
 	for (int i = 0; i < (int)fires->size(); i++) {
 		bool yetTouched = false;
 		for (int j = 0; j < (int)asteroids->size(); j++){

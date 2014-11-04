@@ -2,9 +2,10 @@
 
 
 void Plasma::tick(){
+	x += 0.0005f;
 }
 
 void Plasma::draw(){
-	GraphicPrimitives::drawLine2D(x + 0.14f, y + 0.09f, 1., y + 0.09f, 0.0f, 0.5f, 0.0f);
+	GraphicPrimitives::drawFillRect2D(x + 0.14f, y, 0.005f, 0.183, 1.0f, 0.0f, 0.0f);
 }
 
