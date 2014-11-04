@@ -99,6 +99,7 @@
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
     <ClInclude Include="Plasma.h" />
+    <ClInclude Include="Shield.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="Fleet.h" />
   </ItemGroup>
@@ -121,6 +122,7 @@
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />
     <ClCompile Include="Plasma.cpp" />
+    <ClCompile Include="Shield.cpp" />
     <ClCompile Include="Utility.cpp" />
     <ClCompile Include="Fleet.cpp" />
   </ItemGroup>
