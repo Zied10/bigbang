@@ -5,12 +5,12 @@ class Plasma :
 {
 public:
 	Plasma(float x, float y) :Fire(x, y){
-		power = 40;
-		size = 0.01f;
+		power = 75;
+		size = 0.005f;
 	}
 	void tick();
 	void draw();
 
-	~Plasma();
+	
 };
 

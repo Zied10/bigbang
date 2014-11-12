@@ -11,6 +11,6 @@ public:
 	}
 	void tick();
 
-	~MiddleAsteroid();
+	
 };
 

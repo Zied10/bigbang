@@ -5,11 +5,11 @@ class Laser :
 {
 public:
 	Laser(float x, float y) :Fire(x, y){
-		power = 40;
+		power = 50;
 		size = 0.01f;
 	}
 	void tick();
 	void draw();
-	~Laser();
+	
 };
 

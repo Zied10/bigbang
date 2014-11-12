@@ -19,6 +19,6 @@ public:
 	void removeLife();
 	int getLevel();
 	void addLevel();
-	~GameManagement();
+	
 };
 

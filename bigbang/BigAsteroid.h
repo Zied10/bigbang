@@ -10,6 +10,6 @@ public:
 		size = 0.04;
 	}
 	void tick();
-	~BigAsteroid();
+	
 };
 

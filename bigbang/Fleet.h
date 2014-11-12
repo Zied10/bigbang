@@ -8,21 +8,24 @@ protected:
 	float x, y;
 	int currentVita, maxVita;
 	int price;
+	int tickFleet;
 public:
 	Fleet(float x_, float y_) :
 		x(x_),
-		y(y_){}
+		y(y_),
+		tickFleet(0){}
 	virtual void draw() = 0;
-	virtual void drawVita() = 0;
+	void drawVita();
 	float getX();
 	float getY();
 	int getId();
 	int getPrice();
-	void setCurrentVita(int newCurrentVita);
 	int getCurrentVita();
 	int getMaxVita();
+	int getTickFleet();
+	void incrTickFleet();
+	void setCurrentVita(int newCurrentVita);
 	void removeVitaFleet(int power);
 	bool isDied();
-	~Fleet();
 };
 

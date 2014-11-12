@@ -16,6 +16,7 @@ public:
 	float getX();
 	float getY();
 	int getVita();
+	int getPower();
 	void removeVita(int power);
 	bool isDied();
 	virtual void tick() = 0;
@@ -24,6 +25,6 @@ public:
 	static int getNumberAste();
 	void addNumberAste();
 	static void resetNumberAste();
-	~Asteroid();
+	
 };
 

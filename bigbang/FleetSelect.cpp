@@ -16,6 +16,3 @@ void FleetSelect::setPrice(int fleetPrice){
 int FleetSelect::getPrice(){
 	return price;
 }
-FleetSelect::~FleetSelect()
-{
-}

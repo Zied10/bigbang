@@ -12,8 +12,7 @@ public:
 	}
 
 	void draw();
-	void drawVita();
 
-	~Destroyer();
+	
 };
 

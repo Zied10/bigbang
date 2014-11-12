@@ -49,7 +49,7 @@ void Asteroid::removeVita(int x){
 }
 
 bool Asteroid::touchFleet(Fleet& fleet){
-	if (x  <= (fleet.getX() + 0.09) && x >= fleet.getX() && y >= fleet.getY() - 0.001 && y <= fleet.getY() + 0.18f){
+	if (x  <= (fleet.getX() + 0.14) && x >= fleet.getX() && y >= fleet.getY() - 0.001 && y <= fleet.getY() + 0.18f){
 		fleet.removeVitaFleet(power);
 		return true;
 	}
@@ -65,10 +65,12 @@ void Asteroid::addNumberAste(){
 int Asteroid::getNumberAste(){
 	return numberAste;
 }
+
+int Asteroid::getPower(){
+	return power;
+}
+
 void Asteroid::resetNumberAste(){
 	numberAste = 0;
 }
 
-Asteroid::~Asteroid()
-{
-}

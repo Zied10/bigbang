@@ -15,6 +15,5 @@ public:
 	bool touchAsteroid(Asteroid& asteroid);
 	float getX();
 	float getY();
-	~Fire();
 };
 

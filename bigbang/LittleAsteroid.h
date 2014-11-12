@@ -11,6 +11,6 @@ public:
 		size = 0.01;
 	}
 	void tick();
-	~LittleAsteroid();
+	
 };
 

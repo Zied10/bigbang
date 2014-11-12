@@ -19,6 +19,6 @@ public:
 	void removeClick();
 	int getNbClick();
 	static void rmClick(std::vector<std::vector<Gameboard *> > gm, float x, float y);
-	~Gameboard();
+	
 };
 

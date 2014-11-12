@@ -14,6 +14,7 @@ void Gameboard::draw(){
 	char* afficheClick = new char[100];
 	Utility::itoa(nbClick, afficheClick);
 	GraphicPrimitives::drawFillRect2D(posX, posY, width, width, color, color, color);
+	delete[] afficheClick;
 }
 
 float Gameboard::getPosX(){
@@ -59,6 +60,4 @@ void Gameboard::rmClick(std::vector<std::vector<Gameboard *> > gm, float x, floa
 int Gameboard::getNbClick(){
 	return nbClick;
 }
-Gameboard::~Gameboard()
-{
-}
+

@@ -1,7 +1,7 @@
 #include "Laser.h"
 
 void Laser::tick(){
-	x += 0.0005f;
+	x += 0.02f;
 }
 
 void Laser::draw(){

@@ -19,6 +19,7 @@ void GameManagement::drawMoney(){
 	Utility::itoa(money, charMoney);
 	GraphicPrimitives::drawText2D(textMoney, -0.99, 0.9, 1.0f, 1.0f, 1.0f);
 	GraphicPrimitives::drawText2D(charMoney, -0.97, 0.8, 1.0f, 1.0f, 1.0f);
+	delete[] charMoney;
 }
 
 int GameManagement::getLife(){
@@ -45,7 +46,4 @@ void GameManagement::addLevel(){
 
 int GameManagement::getLevel(){
 	return level;
-}
-GameManagement::~GameManagement()
-{
 }

@@ -9,6 +9,5 @@ public:
 	void setPrice(int fleetPrice);
 	int getId();
 	int getPrice();
-	~FleetSelect();
 };
 

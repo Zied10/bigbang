@@ -10,6 +10,6 @@ public:
 	}
 	void tick();
 	void draw();
-	~Gauss();
+	
 };
 

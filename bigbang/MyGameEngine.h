@@ -13,6 +13,7 @@
 #include "BigAsteroid.h"
 #include "GameManagement.h"
 #include "GameMode.h"
+#include <chrono>
 
 class MyGameEngine:public GameEngine {
 	std::vector<std::vector<Gameboard *> > gameboards;
@@ -21,6 +22,7 @@ class MyGameEngine:public GameEngine {
 	std::vector<Asteroid *> *asteroids;
 	GameManagement *gameManagement;
 	GameMode *gameMode;
+	std::chrono::system_clock::time_point tStart_ = std::chrono::high_resolution_clock::now();
 
 public:
     int tick;
@@ -38,5 +40,7 @@ public:
 	void creationFire();
 	void collisionFireAste();
 	void creationAste(int t);
+	void incrTick();
+	void incrAllTicks();
     
 };

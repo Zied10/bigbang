@@ -2,12 +2,38 @@
 
 void Cruiser::draw(){
 	float xFinal = x + 0.05f;
-	float yFinal = y + 0.05f;
-	GraphicPrimitives::drawFillTriangle2D(xFinal, yFinal, xFinal, yFinal + 0.08f, xFinal + 0.09f, yFinal + 0.04f, 0.42f, 0.18f, 0.18f);
+	float yFinal = y + 0.095f;
+
+	std::vector<float> vectX;
+	std::vector<float> vectY;
+
+	vectX.emplace_back(xFinal);
+	vectY.emplace_back(yFinal);
+
+	vectX.emplace_back(xFinal);
+	vectY.emplace_back(yFinal + 0.02f);
+
+	vectX.emplace_back(xFinal + 0.01f);
+	vectY.emplace_back(yFinal + 0.02f + 0.04f);
+
+	vectX.emplace_back(xFinal + 0.02f);
+	vectY.emplace_back(yFinal + 0.02f);
+
+	vectX.emplace_back(xFinal + 0.09f);
+	vectY.emplace_back(yFinal);
+
+	vectX.emplace_back(xFinal + 0.02f);
+	vectY.emplace_back(yFinal - 0.02f);
+
+	vectX.emplace_back(xFinal + 0.01f);
+	vectY.emplace_back(yFinal - 0.02f - 0.04f);
+
+	vectX.emplace_back(xFinal);
+	vectY.emplace_back(yFinal - 0.02f);
+	
+
+	GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.f, 0.f, 1.f);
 }
 
-void Cruiser::drawVita(){
-	GraphicPrimitives::drawLine2D(x + 0.045, y + 0.03, x + 0.135, y + 0.03, 1.f, 0.f, 0.f);
-}
 
 
