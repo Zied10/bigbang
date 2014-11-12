@@ -23,6 +23,7 @@ class MyGameEngine:public GameEngine {
 	GameManagement *gameManagement;
 	GameMode *gameMode;
 	std::chrono::system_clock::time_point tStart_ = std::chrono::high_resolution_clock::now();
+	int nbLittleAste, nbMiddleAste, nbBigAste;
 
 public:
     int tick;

@@ -2,5 +2,5 @@
 
 
 void LittleAsteroid::tick(){
-	x -= 0.004f;
+	x -= 0.003f;
 }

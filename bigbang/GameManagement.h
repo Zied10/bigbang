@@ -9,7 +9,7 @@ private:
 	int life;
 	int level;
 public:
-	GameManagement():money(50),life(5),level(1){}
+	GameManagement():money(40),life(5),level(1){}
 	void addMoney(int earnedMoney);
 	void removeMoney(int spentMoney);
 	int getMoney();
@@ -19,6 +19,8 @@ public:
 	void removeLife();
 	int getLevel();
 	void addLevel();
-	
+	int nbMaxLittleAste();
+	int nbMaxMiddleAste();
+	int nbMaxBigAste();
 };
 

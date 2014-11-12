@@ -47,3 +47,15 @@ void GameManagement::addLevel(){
 int GameManagement::getLevel(){
 	return level;
 }
+
+int GameManagement::nbMaxLittleAste(){
+	return level * 3;
+}
+
+int GameManagement::nbMaxMiddleAste(){
+	return 1;
+}
+
+int GameManagement::nbMaxBigAste(){
+	return 1;
+}
