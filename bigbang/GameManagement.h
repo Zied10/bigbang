@@ -8,19 +8,28 @@ private:
 	int money;
 	int life;
 	int level;
+	int nbCurrentAste;
 public:
-	GameManagement():money(40),life(5),level(1){}
+	GameManagement():money(100),life(5),level(1),nbCurrentAste(0){}
 	void addMoney(int earnedMoney);
 	void removeMoney(int spentMoney);
-	int getMoney();
 	void drawMoney();
 	void drawLife();
-	int getLife();
+	void drawNextWave();
+	void drawLevel();
+	void drawEnd();
+	void drawIntro();
 	void removeLife();
-	int getLevel();
 	void addLevel();
+	void resetGame();
+	void drawProgression();
+	void setNbCurrentAste(int n);
+	int getMoney();
+	int getLife();
+	int getLevel();
 	int nbMaxLittleAste();
 	int nbMaxMiddleAste();
 	int nbMaxBigAste();
+	
 };
 

@@ -12,6 +12,6 @@ public:
 	}
 
 	void draw();
-	
+	void drawDescription();
 };
 

@@ -5,7 +5,7 @@ class MiddleAsteroid :
 {
 public:
 	MiddleAsteroid(float y) :Asteroid(y){
-		vita = 250;
+		vita = 350;
 		power = 100;
 		size = 0.025;
 	}

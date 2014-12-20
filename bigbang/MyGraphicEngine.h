@@ -5,6 +5,7 @@
 #include "Fleet.h"
 #include "Fire.h"
 #include "Asteroid.h"
+#include "FleetSelect.h"
 #include "GameManagement.h"
 #include "GameMode.h"
 
@@ -15,17 +16,19 @@ class MyGraphicEngine:public GraphicEngine {
 	std::vector<Fire *> *fires;
 	std::vector<Asteroid *> *asteroids;
 	std::vector<Fleet *> *fleetsChoice;
+	FleetSelect *fleetSelect;
 	GameManagement *gameManagement;
 	GameMode *gameMode;
     
 public:
     
-	MyGraphicEngine(std::vector<std::vector<Gameboard *> > gameboards_, std::vector<Fleet *> *fleets_, std::vector<Fire *> *fires_, std::vector<Asteroid *> *asteroids_, std::vector<Fleet *> *fleetsChoice_, GameManagement *gameManagement_, GameMode *gameMode_) :
+	MyGraphicEngine(std::vector<std::vector<Gameboard *> > gameboards_, std::vector<Fleet *> *fleets_, std::vector<Fire *> *fires_, std::vector<Asteroid *> *asteroids_, std::vector<Fleet *> *fleetsChoice_, FleetSelect *fleetSelect_, GameManagement *gameManagement_, GameMode *gameMode_) :
 		gameboards(gameboards_),
 		fleets(fleets_),
 		fires(fires_),
 		asteroids(asteroids_),
 		fleetsChoice(fleetsChoice_),
+		fleetSelect(fleetSelect_),
 		gameManagement(gameManagement_),
 		gameMode(gameMode_)
         {}

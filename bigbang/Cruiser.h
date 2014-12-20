@@ -8,10 +8,11 @@ public:
 		id = 1;
 		currentVita = 100;
 		maxVita = 100;
-		price = 10;
+		price = 15;
 	}
 
 	void draw();
+	void drawDescription();
 	
 };
 

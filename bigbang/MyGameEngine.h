@@ -34,6 +34,9 @@ public:
 		asteroids(asteroids_),
 		gameManagement(gameManagement_),
 		gameMode(gameMode_),
+		nbLittleAste(0),
+		nbMiddleAste(0),
+		nbBigAste(0),
 		tick(0){}
     
     virtual void idle();
@@ -43,5 +46,6 @@ public:
 	void creationAste(int t);
 	void incrTick();
 	void incrAllTicks();
+	void resetNbAste();
     
 };

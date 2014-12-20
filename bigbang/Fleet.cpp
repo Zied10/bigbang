@@ -53,3 +53,15 @@ int Fleet::getTickFleet(){
 void Fleet::incrTickFleet(){
 	tickFleet += 1;
 }
+
+void Fleet::drawPrice(){
+	char* charPrice = new char[100];
+	Utility::itoa(price, charPrice);
+	GraphicPrimitives::drawText2D(charPrice, x, y, 1.0f, 1.0f, 1.0f);
+	GraphicPrimitives::drawText2D("$", x + 0.07, y, 1.0f, 1.0f, 0.0f);
+	delete[] charPrice;
+}
+
+void Fleet::drawSelect(){
+	GraphicPrimitives::drawFillRect2D(x + 0.01, y - 0.01, 0.15, 0.18, .2, .2, .2);
+}

@@ -5,7 +5,7 @@ class Laser :
 {
 public:
 	Laser(float x, float y) :Fire(x, y){
-		power = 50;
+		power = 40;
 		size = 0.01f;
 	}
 	void tick();

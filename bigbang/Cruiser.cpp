@@ -35,5 +35,7 @@ void Cruiser::draw(){
 	GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.f, 0.f, 1.f);
 }
 
-
+void Cruiser::drawDescription(){
+	GraphicPrimitives::drawText2D("Forte CDT, bouclier et puissance faible", -0.7, -0.9, 1., 1., 1.);
+}
 

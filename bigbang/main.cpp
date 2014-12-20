@@ -23,7 +23,7 @@ int main(int argc, char * argv[])
 	FleetSelect fleetSelect;
 	GameManagement gameManagement;
 	GameMode gameMode;
-	gameMode = IN_GAME;
+	gameMode = INTRO;
 
 	/* Creation du tableau de jeu */
 	for (int line = 0; line < 10; line++){
@@ -42,9 +42,9 @@ int main(int argc, char * argv[])
 	fleetsChoice.push_back(new Bomber(-1.f, 0.f));
 	fleetsChoice.push_back(new Destroyer(-1.f, -0.2f));
 
-	GraphicEngine * ge = new MyGraphicEngine(gameboards, &fleets, &fires, &asteroids, &fleetsChoice, &gameManagement, &gameMode);
+	GraphicEngine * ge = new MyGraphicEngine(gameboards, &fleets, &fires, &asteroids, &fleetsChoice, &fleetSelect, &gameManagement, &gameMode);
 	GameEngine * gme = new MyGameEngine(gameboards, &fleets, &fires, &asteroids, &gameManagement, &gameMode);
-	ControlEngine * ce = new MyControlEngine(gameboards, &fleets, &fleetsChoice, fleetSelect, &gameManagement, &gameMode);
+	ControlEngine * ce = new MyControlEngine(gameboards, &fleets, &fleetsChoice, &fleetSelect, &gameManagement, &gameMode);
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);
     e.setControlEngine(ce);

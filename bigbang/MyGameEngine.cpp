@@ -8,13 +8,18 @@ void MyGameEngine::idle(){
 	if (currentTime >= 15){
 
 		switch ((*gameMode)){
+		case INTRO:
+			break;
 		case IN_GAME:
 			collisionAsteFleet();
 			creationFire();
 			collisionFireAste();
 			creationAste(100);
 			
-			if (Asteroid::getNumberAste() == 3){
+			if ((nbLittleAste + nbMiddleAste + nbBigAste) >=
+				(*gameManagement).nbMaxLittleAste() + (*gameManagement).nbMaxMiddleAste() + (*gameManagement).nbMaxBigAste() &&
+				(*asteroids).size() == 0)
+			{
 				(*gameMode) = WAIT_WAVE;
 			}
 			if ((*gameManagement).getLife() == 0){
@@ -23,18 +28,30 @@ void MyGameEngine::idle(){
 			incrAllTicks();
 			break;
 
-
-		case PAUSE:
-			break;
-
 		case WAIT_WAVE:
 			collisionAsteFleet();
 			creationFire();
 			collisionFireAste();
 			incrAllTicks();
+			resetNbAste();
 			break;
 
 		case FINISH:
+			for (int i = 0; i < (int)asteroids->size(); i++) {
+				delete (*asteroids)[i];
+				(*asteroids).erase((*asteroids).begin() + i);
+			}
+
+			for (int j = 0; j < (int)fleets->size(); j++){
+				delete (*fleets)[j];
+				(*fleets).erase((*fleets).begin() + j);
+			}
+
+			for (int i = 0; i < (int)fires->size(); i++) {
+				delete (*fires)[i];
+				(*fires).erase((*fires).begin() + i);
+			}
+			resetNbAste();
 			break;
 		}
 		tStart_ = std::chrono::high_resolution_clock::now();
@@ -87,18 +104,18 @@ void MyGameEngine::creationFire(){
 				}
 				else break;
 			case 2:
-				if (((*fleets)[i]->getTickFleet() % 150) == 0){
+				if (((*fleets)[i]->getTickFleet() % 250) == 0){
 					fires->push_back(new Gauss((*fleets)[i]->getX(), (*fleets)[i]->getY()));
 					break;
 				}
 				else break;
 			case 3:
-				if (((*fleets)[i]->getTickFleet() % 250) == 0){
+				if (((*fleets)[i]->getTickFleet() % 200) == 0){
 					fires->push_back(new Plasma((*fleets)[i]->getX(), (*fleets)[i]->getY()));
 					if ((*fleets)[i]->getY() < 0.8){
 						fires->push_back(new Plasma((*fleets)[i]->getX(), (*fleets)[i]->getY() + 0.183));
 					}
-					if ((*fleets)[i]->getY() > -0.63){
+					if ((*fleets)[i]->getY() > -0.65){
 						fires->push_back(new Plasma((*fleets)[i]->getX(), (*fleets)[i]->getY() - 0.183));
 					}
 					break;
@@ -141,10 +158,20 @@ void MyGameEngine::collisionFireAste(){
 /* Creation d'asteroides */
 void MyGameEngine::creationAste(int t){
 	if ((tick % t) == 0){
-		//asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * 5)));
-		//asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * 6)));
-		//asteroids->push_back(new BigAsteroid(-0.817 + (0.183 * 7)));
-		asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
+		if (nbLittleAste < (*gameManagement).nbMaxLittleAste()){
+			asteroids->push_back(new LittleAsteroid(-0.817 + (0.183 * (rand() % 10))));
+			nbLittleAste++;
+		}
+		if (nbMiddleAste < (*gameManagement).nbMaxMiddleAste()){
+			asteroids->push_back(new MiddleAsteroid(-0.817 + (0.183 * (rand() % 10))));
+			nbMiddleAste++;
+		}
+
+		if (nbBigAste < (*gameManagement).nbMaxBigAste()){
+			asteroids->push_back(new BigAsteroid(-0.817 + (0.183 * (rand() % 10))));
+			nbBigAste++;
+		}
+		(*gameManagement).setNbCurrentAste(nbLittleAste + nbMiddleAste + nbBigAste);
 	}
 }
 
@@ -153,4 +180,11 @@ void MyGameEngine::incrAllTicks(){
 		(*fleets)[i]->incrTickFleet();
 	}
 	tick++;
+}
+
+void MyGameEngine::resetNbAste(){
+	nbLittleAste = 0;
+	nbMiddleAste = 0;
+	nbBigAste = 0;
+	(*gameManagement).setNbCurrentAste(nbLittleAste + nbMiddleAste + nbBigAste);
 }

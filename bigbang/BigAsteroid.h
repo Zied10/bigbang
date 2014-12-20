@@ -5,7 +5,7 @@ class BigAsteroid :
 {
 public:
 	BigAsteroid(float y) :Asteroid(y){
-		vita = 500;
+		vita = 700;
 		power = 200;
 		size = 0.04;
 	}

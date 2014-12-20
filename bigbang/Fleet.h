@@ -23,6 +23,9 @@ public:
 	int getCurrentVita();
 	int getMaxVita();
 	int getTickFleet();
+	void drawPrice();
+	void drawSelect();
+	virtual void drawDescription() = 0;
 	void incrTickFleet();
 	void setCurrentVita(int newCurrentVita);
 	void removeVitaFleet(int power);

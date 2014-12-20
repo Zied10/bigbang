@@ -1,5 +1,5 @@
 #pragma once
 
 enum GameMode {
-	IN_GAME, PAUSE, WAIT_WAVE, FINISH
+	INTRO, IN_GAME, WAIT_WAVE, FINISH
 };

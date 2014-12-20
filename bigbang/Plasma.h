@@ -5,7 +5,7 @@ class Plasma :
 {
 public:
 	Plasma(float x, float y) :Fire(x, y){
-		power = 75;
+		power = 55;
 		size = 0.005f;
 	}
 	void tick();
